@@ -3,22 +3,23 @@
   <head>
     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
     <script src="{{ url_for('static', filename='copy.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div class="container">
       {% if not short_url %}
       <form method="post" class="" action="">
-        <input type="text" id="url" name="url" class="" placeholder="Enter URL to shorten..." />
+        <input type="text" id="url" name="url" placeholder="Enter URL to shorten..." />
         <button type="submit" class="btn"><span>Submit</span></button>
       </form>
       {% else %}
-        <input type="text" class="short_url" value="{{ short_url }}" id="copy_text">
+      <input readonly type="text" value="{{ short_url }}" id="copy_text">
       <button class="btn" onclick="copy()"><span>Copy to Clipboard</span></button>
       <button class="btn" onclick="window.location='http://localhost:5000';"><span>Another</span></button>
       {% endif %}
     </div>
     <footer>
-      iofq.net
+      sh.iofq.net
     </footer>
   </body>
 </html>

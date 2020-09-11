@@ -37,23 +37,21 @@ a:hover {
 	background: var(--blue);
 }
 
-.short_url {
-  text-decoration: underline;
-  display: block;
-  position: absolute;
-  border: 1px solid #666666;
-}
-
-form h1 {
-	padding-left: 0.125rem;
-}
-
-input {
+input[type=text] {
+  position: relative;
+  border: 1px solid var(--foreground);
+  margin: 0 auto;
+  min-width: 600px;
+  max-width: 600px;
+  display:block;
+  vertical-align: middle;
+	height:64px;
+	padding:10px 16px;
 	font-family: var(--font);
 	font-size: 1rem;
 	color: var(--foreground);
 	background-color: var(--background);
-	border: none;
+	box-sizing:border-box
 }
 
 .btn {
