@@ -3,14 +3,12 @@ FROM debian:stable
 MAINTAINER iofq "mail@iofq.net"
 
 RUN apt update -y && \
-    apt install -y python-pip python-dev git
+    apt install -y python3-pip python-dev git python3
 
-RUN git clone https://github.com/iofq/pyshort /app
-
+ADD . /app
 WORKDIR /app
-
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 EXPOSE 5000
-ENTRYPOINT ["python"]
+ENTRYPOINT ["python3"]
 CMD ["main.py"]

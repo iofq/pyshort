@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 base_64 = string.digits + string.ascii_lowercase + string.ascii_uppercase
 
 app = Flask(__name__)
-host = "http://localhost:5000/"
+host = "https://s.iofq.net/"
 
 def to_base64(num, b = 62):
     r = num % b
@@ -91,5 +91,5 @@ def redirect_short(short_url):
 
 if __name__ == '__main__':
     table_check()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
     
