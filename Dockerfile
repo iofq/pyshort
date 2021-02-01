@@ -1,6 +1,6 @@
 FROM debian:stable
-
 MAINTAINER iofq "mail@iofq.net"
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt update -y && \
     apt install -y python3-pip python-dev git python3

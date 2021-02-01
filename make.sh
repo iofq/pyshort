@@ -1,5 +1,4 @@
 #!/bin/bash
-
 docker build -t pyshort .
 docker rm -f pyshort
 

@@ -1,5 +1,0 @@
-custom urls
-fixed length random url (eg iofq.net/sh93s)
-  - maybe add checksum to id? eg. f(chksm(id) % (62^2)) + f(id) = new_id
-show long url on short url page
-build container
